@@ -11,7 +11,7 @@ In return, they should reciprocate that respect in addressing your issue or asse
 
 The issue tracker is the preferred channel for bug reports but please respect the following restrictions:
 
-* Please **do not** use the issue tracker for personal support requests (use [Gitter](https://gitter.im/bvaughn/react-virtualized)).
+* Please **do not** use the issue tracker for personal support requests (use [Gitter](https://gitter.im/bvaughn/react-virtualized-select)).
 * Please **do not** derail or troll issues. Keep the discussion on topic and respect the opinions of others.
 
 <a name="bugs"></a>
@@ -77,11 +77,11 @@ Follow this process if you'd like your work considered for inclusion in the proj
 
    ```bash
    # Clone your fork of the repo into the current directory
-   git clone https://github.com/<your-username>/react-virtualized
+   git clone https://github.com/<your-username>/react-virtualized-select
    # Navigate to the newly cloned directory
-   cd react-virtualized
+   cd react-virtualized-select
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/bvaughn/react-virtualized
+   git remote add upstream https://github.com/bvaughn/react-virtualized-select
    ```
 
 2. If you cloned a while ago, get the latest changes from upstream:
