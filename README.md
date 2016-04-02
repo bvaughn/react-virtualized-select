@@ -41,4 +41,27 @@ Alternately you can load a global-friendly UMD build:
 <script src="path-to-react-virtualized-select/dist/umd/react-virtualized-select.js"></script>
 ```
 
-More documentation coming soon!
+From there one, _react-select-virtualized_ works just like _react-select_. You pass it an array of options, along with any other parameters supported by the [select component](https://github.com/JedWatson/react-select/#usage).
+
+The additional parameters introduced by _react-select-virtualized_ are optional. They are:
+
+| Property | Type | Description |
+|:---|:---|:---|
+| maxHeight | `PropTypes.number` | Max height of options menu; defaults to 200 pixels. |
+| optionHeight | `PropTypes.number` | Option height; defaults to 35 pixels. |
+| optionRenderer | `PropTypes.func` | Custom option renderer; (see below for signature). |
+
+## Custom Option Renderer
+
+You can override the built-in option renderer by specifying your own `optionRenderer` property. Your renderer should return a React element that represents the specified option. It will be passed the following named parameters:
+
+| Property | Type | Description |
+|:---|:---|:---|
+| focusedOption | `PropTypes.object` | The option currently-focused in the dropdown. Use this property to determine if your rendered option should be highlighted or styled differently. |
+| focusedOptionIndex | `PropTypes.number` | Index of the currently-focused option. |
+| focusOption | `PropTypes.func` | Callback to update the focused option; for example, you may want to call this function on mouse-over. |
+| labelKey | `PropTypes.string` | Attribute of option that contains the display text. |
+| option | `PropTypes.object` | The option to be rendered. |
+| options | `PropTypes.arrayOf(PropTypes.object)` | Array of options (objects) contained in the select menu. |
+| selectValue | `PropTypes.func` | Callback to update the selected values; for example, you may want to call this function on click. |
+| valueArray | `PropTypes.arrayOf(PropTypes.object)` | Array of the currently-selected options. Use this property to determine if your rendered option should be highlighted or styled differently. |
