@@ -163,7 +163,7 @@
             function VirtualizedSelect(props, context) {
                 _classCallCheck(this, VirtualizedSelect);
                 var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(VirtualizedSelect).call(this, props, context));
-                return _this._renderMenu = _this._renderMenu.bind(_this), _this._rowRenderer = _this._rowRenderer.bind(_this), 
+                return _this._renderMenu = _this._renderMenu.bind(_this), _this._optionRenderer = _this._optionRenderer.bind(_this), 
                 _this;
             }
             return _inherits(VirtualizedSelect, _Component), _createClass(VirtualizedSelect, [ {
@@ -192,7 +192,7 @@
                             valueArray: valueArray
                         });
                     }
-                    var focusedOption = _ref.focusedOption, focusOption = _ref.focusOption, labelKey = _ref.labelKey, options = _ref.options, selectValue = _ref.selectValue, valueArray = _ref.valueArray, _props = this.props, maxHeight = _props.maxHeight, optionHeight = _props.optionHeight, rowRenderer = _props.rowRenderer, focusedOptionIndex = options.indexOf(focusedOption), height = Math.min(maxHeight, options.length * optionHeight), innerRowRenderer = rowRenderer || this._rowRenderer;
+                    var focusedOption = _ref.focusedOption, focusOption = _ref.focusOption, labelKey = _ref.labelKey, options = _ref.options, selectValue = _ref.selectValue, valueArray = _ref.valueArray, _props = this.props, maxHeight = _props.maxHeight, optionHeight = _props.optionHeight, optionRenderer = _props.optionRenderer, focusedOptionIndex = options.indexOf(focusedOption), height = Math.min(maxHeight, options.length * optionHeight), innerRowRenderer = optionRenderer || this._optionRenderer;
                     return _jsx(_reactVirtualized.AutoSizer, {
                         disableHeight: !0
                     }, void 0, function(_ref2) {
@@ -209,7 +209,7 @@
                     });
                 }
             }, {
-                key: "_rowRenderer",
+                key: "_optionRenderer",
                 value: function(_ref3) {
                     var focusedOption = _ref3.focusedOption, focusOption = _ref3.focusOption, labelKey = _ref3.labelKey, option = _ref3.option, selectValue = _ref3.selectValue, optionHeight = this.props.optionHeight, className = option === focusedOption ? "VirtualizedSelectOption VirtualizedSelectFocusedOption" : "VirtualizedSelectOption";
                     return _jsx("div", {
@@ -230,7 +230,7 @@
         VirtualizedSelect.propTypes = {
             maxHeight: _react.PropTypes.number.isRequired,
             optionHeight: _react.PropTypes.number.isRequired,
-            rowRenderer: _react.PropTypes.func
+            optionRenderer: _react.PropTypes.func
         }, VirtualizedSelect.defaultProps = {
             maxHeight: 200,
             optionHeight: 35

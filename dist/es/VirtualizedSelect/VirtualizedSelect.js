@@ -12,7 +12,7 @@ var VirtualizedSelect = function (_Component) {
     var _this = babelHelpers.possibleConstructorReturn(this, Object.getPrototypeOf(VirtualizedSelect).call(this, props, context));
 
     _this._renderMenu = _this._renderMenu.bind(_this);
-    _this._rowRenderer = _this._rowRenderer.bind(_this);
+    _this._optionRenderer = _this._optionRenderer.bind(_this);
     return _this;
   }
 
@@ -39,11 +39,11 @@ var VirtualizedSelect = function (_Component) {
       var _props = this.props;
       var maxHeight = _props.maxHeight;
       var optionHeight = _props.optionHeight;
-      var rowRenderer = _props.rowRenderer;
+      var optionRenderer = _props.optionRenderer;
 
       var focusedOptionIndex = options.indexOf(focusedOption);
       var height = Math.min(maxHeight, options.length * optionHeight);
-      var innerRowRenderer = rowRenderer || this._rowRenderer;
+      var innerRowRenderer = optionRenderer || this._optionRenderer;
 
       function wrappedRowRenderer(index) {
         var option = options[index];
@@ -69,8 +69,8 @@ var VirtualizedSelect = function (_Component) {
       );
     }
   }, {
-    key: '_rowRenderer',
-    value: function _rowRenderer(_ref3) {
+    key: '_optionRenderer',
+    value: function _optionRenderer(_ref3) {
       var focusedOption = _ref3.focusedOption;
       var focusOption = _ref3.focusOption;
       var labelKey = _ref3.labelKey;
@@ -105,7 +105,7 @@ var VirtualizedSelect = function (_Component) {
 VirtualizedSelect.propTypes = {
   maxHeight: PropTypes.number.isRequired,
   optionHeight: PropTypes.number.isRequired,
-  rowRenderer: PropTypes.func
+  optionRenderer: PropTypes.func
 };
 VirtualizedSelect.defaultProps = {
   maxHeight: 200,
