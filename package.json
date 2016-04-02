@@ -2,7 +2,8 @@
   "name": "react-virtualized-select",
   "version": "0.0.0",
   "description": "Drop-down menu for React with windowing to support large numbers of options.",
-  "main": "index.js",
+  "main": "dist/commonjs/index.js",
+  "jsnext:main": "dist/es/index.js",
   "scripts": {
     "build": "npm run build:commonjs && npm run build:css && npm run build:es && npm run build:demo && npm run build:umd",
     "build:commonjs": "npm run clean:commonjs && cross-env NODE_ENV=production cross-env BABEL_ENV=commonjs babel source --out-dir dist/commonjs --ignore *.example.js,*.test.js,source/demo/,source/tests.js",
