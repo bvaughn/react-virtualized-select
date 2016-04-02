@@ -114,11 +114,12 @@
     "webpack": "^1.9.6",
     "webpack-dev-server": "^1.14.0"
   },
-  "dependencies": {},
-  "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0-rc.1",
-    "react-dom": "^0.14.3 || ^15.0.0-rc.1",
+  "dependencies": {
     "react-select": "^1.0.0-beta12",
     "react-virtualized": "^6.0.4"
+  },
+  "peerDependencies": {
+    "react": "^0.14.0 || ^15.0.0-rc.1",
+    "react-dom": "^0.14.3 || ^15.0.0-rc.1"
   }
 }

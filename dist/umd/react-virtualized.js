@@ -76,9 +76,9 @@
         }
         Object.defineProperty(exports, "__esModule", {
             value: !0
-        }), exports.VirtualizedSelect = void 0;
-        var _VirtualizedSelect2 = __webpack_require__(1), _VirtualizedSelect3 = _interopRequireDefault(_VirtualizedSelect2);
-        exports.VirtualizedSelect = _VirtualizedSelect3["default"];
+        }), exports["default"] = void 0;
+        var _VirtualizedSelect = __webpack_require__(1), _VirtualizedSelect2 = _interopRequireDefault(_VirtualizedSelect);
+        exports["default"] = _VirtualizedSelect2["default"];
     }, /* 1 */
     /***/
     function(module, exports, __webpack_require__) {

@@ -3,12 +3,12 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.VirtualizedSelect = undefined;
+exports.default = undefined;
 
-var _VirtualizedSelect2 = require('./VirtualizedSelect');
+var _VirtualizedSelect = require('./VirtualizedSelect');
 
-var _VirtualizedSelect3 = _interopRequireDefault(_VirtualizedSelect2);
+var _VirtualizedSelect2 = _interopRequireDefault(_VirtualizedSelect);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.VirtualizedSelect = _VirtualizedSelect3.default;
+exports.default = _VirtualizedSelect2.default;

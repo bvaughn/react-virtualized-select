@@ -1,2 +1,2 @@
-import _VirtualizedSelect from './VirtualizedSelect';
-export { _VirtualizedSelect as VirtualizedSelect };
+import _default from './VirtualizedSelect';
+export { _default as default };

@@ -1,2 +1,2 @@
 /* @flow */
-export VirtualizedSelect from './VirtualizedSelect'
+export default from './VirtualizedSelect'
