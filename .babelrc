@@ -1,0 +1,76 @@
+{
+  "env": {
+    "commonjs": {
+      "presets": [
+        "es2015",
+        "react",
+        "stage-0"
+      ]
+    },
+    "development": {
+      "plugins": [
+        "typecheck",
+        [
+          "react-transform",
+          {
+            "transforms": [
+              {
+                "transform": "react-transform-hmr",
+                "imports": [
+                  "react"
+                ],
+                "locals": [
+                  "module"
+                ]
+              },
+              {
+                "transform": "react-transform-catch-errors",
+                "imports": [
+                  "react",
+                  "redbox-react"
+                ]
+              }
+            ]
+          }
+        ]
+      ],
+      "presets": [
+        "es2015",
+        "react",
+        "stage-0"
+      ]
+    },
+    "es": {
+      "presets": [
+        "es2015-rollup",
+        "react",
+        "stage-0"
+      ]
+    },
+    "production": {
+      "comments": false,
+      "plugins": [
+        "transform-react-inline-elements"
+      ],
+      "presets": [
+        "es2015",
+        "react",
+        "stage-0"
+      ]
+    },
+    "test": {
+      "comments": false,
+      "plugins": [
+        "__coverage__"
+      ],
+      "presets": [
+        "es2015",
+        "react",
+        "stage-0"
+      ]
+    }
+  },
+  "plugins": [
+    "transform-decorators-legacy"
+  ]
+}

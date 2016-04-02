@@ -1,0 +1,12 @@
+.VirtualSelectGrid {
+  z-index: 1;
+}
+
+.VirtualizedSelectOption {
+  display: flex;
+  align-items: center;
+  padding: 0 .5rem;
+}
+.VirtualizedSelectFocusedOption {
+  background-color: rgba(0, 126, 255, 0.1);
+}
