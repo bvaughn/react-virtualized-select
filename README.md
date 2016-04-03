@@ -24,14 +24,37 @@ ES6, CommonJS, and UMD builds are available with each distribution.
 For example:
 
 ```js
+import React, { Component } from 'react'
+import VirtualizedSelect from 'react-virtualized-select'
+
 // Make sure to import default styles.
 // This only needs to be done once; probably during your application's bootstrapping process.
-import 'react-select/dist/react-select.css';
-import 'react-virtualized/styles.css';
-import 'react-virtualized-select/styles.css';
+import 'react-virtualized-select/styles.css'
 
-// Then import the virtualized Select HOC
-import VirtualizedSelect from 'react-virtualized-select';
+class MySelect extends Component {
+  constructor (props) {
+    super(props)
+
+    this.state = {}
+  }
+
+  render () {
+    const options = [
+      { label: "One", value: 1 },
+      { label: "Two", value: 2 },
+      { label: "Three", value: 3 }
+      // And so on...
+    ]
+
+    return (
+      <VirtualizedSelect
+        options={options}
+        onChange={(selectValue) => this.setState({ selectValue })}
+        value={this.state.selectValue}
+      />
+    )
+  }
+}
 ```
 
 Alternately you can load a global-friendly UMD build:
