@@ -11,8 +11,7 @@
 
 ### Demos available here: http://bvaughn.github.io/react-virtualized-select/
 
-Getting started
----------------
+## Getting started
 
 Install `react-virtualized-select` using npm.
 
@@ -29,7 +28,7 @@ For example:
 import 'react-virtualized-select/styles.css'
 
 // Then import the virtualized Select HOC
-import VirtualizedSelect from 'react-virtualized-select';
+import VirtualizedSelect from 'react-virtualized-select'
 ```
 
 Alternately you can load a global-friendly UMD build:
@@ -39,7 +38,9 @@ Alternately you can load a global-friendly UMD build:
 <script src="path-to-react-virtualized-select/dist/umd/react-virtualized-select.js"></script>
 ```
 
-From there one, _react-select-virtualized_ works just like _react-select_. You pass it an array of options, along with any other parameters supported by the [select component](https://github.com/JedWatson/react-select/#usage). Here's a simple example:
+## Simple Example
+
+_react-select-virtualized_ works just like _react-select_. You pass it an array of options, along with any other parameters supported by the [`Select` component](https://github.com/JedWatson/react-select/#usage). Here's a simple example:
 
 ```js
 import React, { Component } from 'react'
@@ -71,6 +72,8 @@ class MySelect extends Component {
   }
 }
 ```
+
+## React Virtualized Select Props
 
 The additional parameters introduced by _react-select-virtualized_ are optional. They are:
 
