@@ -102,8 +102,6 @@
     "react": "^15.0.0-rc.2",
     "react-addons-test-utils": "^0.14.3",
     "react-dom": "^15.0.0-rc.2",
-    "react-select": "^1.0.0-beta12",
-    "react-virtualized": "^6.0.4",
     "react-transform-catch-errors": "^1.0.2",
     "react-transform-hmr": "^1.0.2",
     "redbox-react": "^1.0.1",
