@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import citiesJSON from './CitiesJSON'
-import SelectExample from '../VirtualizedSelect/VirtualizedSelect.example'
+import VirtualizedSelectExample from '../VirtualizedSelect/VirtualizedSelect.example'
+import cityData from './data/cities.js'
+import countryData from './data/countries.js'
 import styles from './Application.css'
 import '../../styles.css'
 
@@ -15,20 +16,20 @@ class Application extends Component {
           </h1>
 
           <div className={styles.container}>
-            Enjoy drop-down menus powered by <a className={styles.headerLink} href='https://github.com/JedWatson/react-select/'>JedWatson/react-select</a> and
-            windowing performance gains brought to you by <a className={styles.headerLink} href='https://github.com/bvaughn/react-virtualized/'>bvaughn/react-virtualized</a>.
+            Enjoy drop-down menus powered by <a className={styles.headerLink} href='https://github.com/JedWatson/react-select/'><strong>@JedWatson</strong>'s react-select</a> and
+            efficient windowing brought to you by <a className={styles.headerLink} href='https://github.com/bvaughn/react-virtualized/'><strong>@bvaughn</strong>'s react-virtualized</a>.
           </div>
-        </header>
-        <header className={styles.subHeader}>
+
           <div className={styles.container}>
-            <a href='https://github.com/bvaughn/react-virtualized-select/'>Code and Docs on GitHub</a>.
+            Docs and code on <a className={styles.headerLink} href='https://github.com/bvaughn/react-virtualized-select/'>GitHub</a>.
           </div>
         </header>
 
         <section className={styles.container}>
-          <h4>World's Largest 1,000 Cities</h4>
-
-          <SelectExample options={citiesJSON}/>
+          <VirtualizedSelectExample
+            cityData={cityData}
+            countryData={countryData}
+          />
         </section>
       </div>
     )

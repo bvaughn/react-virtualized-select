@@ -1,5 +1,6 @@
 html, body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
   margin: 0;
   padding: 0;
 }
@@ -17,7 +18,7 @@ a:hover {
 
 .header {
   background-color: #2196f3;
-  color: rgba(255, 255, 255, .9);
+  color: rgba(255, 255, 255, .85);
   margin: 0;
   padding: 1rem;
 }
@@ -36,6 +37,10 @@ h1 {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: .5rem;
+}
+.container:first-of-type {
+  margin-top: 0;
 }
 
 .headerLink {

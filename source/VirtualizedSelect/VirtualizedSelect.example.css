@@ -1,0 +1,44 @@
+.header {
+  margin: 2rem 0 1rem;
+}
+
+.description {
+  margin: 1rem 0;
+  font-size: .85rem;
+  color: #999;
+}
+
+.optionsList {
+  display: flex;
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.optionListItem {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.countryOption {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 1rem;
+}
+.countryOptionFocused {
+  background-color: rgba(0, 126, 255, 0.1);
+}
+.countryOptionSelected {
+  font-weight: bold;
+}
+
+.countryFlag {
+  height: 25px;
+  width: auto;
+  flex: 0 0 auto;
+}
+
+.countryLabel {
+  flex: 1 1 auto;
+}

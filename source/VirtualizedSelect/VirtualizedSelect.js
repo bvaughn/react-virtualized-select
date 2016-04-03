@@ -73,8 +73,8 @@ export default class VirtualizedSelect extends Component {
     return (
       <div
         className={className}
-        onMouseOver={() => focusOption(option)}
         onClick={() => selectValue(option)}
+        onMouseOver={() => focusOption(option)}
         style={{
           height: optionHeight
         }}
