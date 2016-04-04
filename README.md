@@ -4,8 +4,6 @@
 ![NPM license](https://img.shields.io/npm/l/react-virtualized-select.svg?style=flat)
 ![NPM total downloads](https://img.shields.io/npm/dt/react-virtualized-select.svg?style=flat)
 ![NPM monthly downloads](https://img.shields.io/npm/dm/react-virtualized-select.svg?style=flat)
-[![Circle CI badge](https://img.shields.io/circleci/project/bvaughn/react-virtualized-select/master.svg?style=flat)](https://circleci.com/gh/bvaughn/react-virtualized-select)
-[![Codecov badge](https://img.shields.io/codecov/c/github/bvaughn/react-virtualized-select/master.svg)](https://codecov.io/github/bvaughn/react-virtualized-select)
 [![PayPal donate button](https://img.shields.io/badge/paypal-donate-lightgray.svg?style=flat)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5CVMYQKVPZC72)
 [![Patreon donate button](https://img.shields.io/badge/patreon-donate%20once-lightgray.svg?style=flat)](https://www.patreon.com/user?u=2979769)
 
