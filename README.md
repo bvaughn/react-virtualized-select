@@ -9,6 +9,8 @@
 
 ### Demos available here: http://bvaughn.github.io/react-virtualized-select/
 
+![react-virtualized-select example](https://cloud.githubusercontent.com/assets/29597/14285960/46d733a6-fb02-11e5-884a-e349eb462704.gif)
+
 ## Getting started
 
 Install `react-virtualized-select` using npm.

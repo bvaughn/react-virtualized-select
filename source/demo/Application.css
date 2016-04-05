@@ -20,7 +20,7 @@ a:hover {
   background-color: #2196f3;
   color: rgba(255, 255, 255, .85);
   margin: 0;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .subHeader {
@@ -35,9 +35,8 @@ h1 {
 .container {
   width: 800px;
   max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: .5rem;
+  margin: .5rem auto 0;
+  padding: 0 1rem;
 }
 .container:first-of-type {
   margin-top: 0;
