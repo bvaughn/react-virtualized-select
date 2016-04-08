@@ -1,6 +1,6 @@
 {
   "name": "react-virtualized-select",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Drop-down menu for React with windowing to support large numbers of options.",
   "main": "dist/commonjs/index.js",
   "jsnext:main": "dist/es/index.js",
@@ -99,9 +99,9 @@
     "postcss": "^5.0.14",
     "postcss-cli": "^2.3.3",
     "postcss-loader": "^0.8.0",
-    "react": "^15.0.0-rc.2",
+    "react": "^15.0.0",
     "react-addons-test-utils": "^0.14.3",
-    "react-dom": "^15.0.0-rc.2",
+    "react-dom": "^15.0.0",
     "react-transform-catch-errors": "^1.0.2",
     "react-transform-hmr": "^1.0.2",
     "redbox-react": "^1.0.1",
@@ -117,7 +117,7 @@
     "react-virtualized": "^6.0.4"
   },
   "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0-rc.2",
-    "react-dom": "^0.14.3 || ^15.0.0-rc.2"
+    "react": "^0.14.0 || ^15.0.0",
+    "react-dom": "^0.14.0 || ^15.0.0"
   }
 }

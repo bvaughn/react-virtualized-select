@@ -108,11 +108,11 @@ var VirtualizedSelect = function (_Component) {
         'div',
         {
           className: className,
-          onMouseOver: function onMouseOver() {
-            return focusOption(option);
-          },
           onClick: function onClick() {
             return selectValue(option);
+          },
+          onMouseOver: function onMouseOver() {
+            return focusOption(option);
           },
           style: {
             height: optionHeight

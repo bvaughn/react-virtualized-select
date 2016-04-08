@@ -214,11 +214,11 @@
                     var focusedOption = _ref3.focusedOption, focusOption = _ref3.focusOption, labelKey = _ref3.labelKey, option = _ref3.option, selectValue = _ref3.selectValue, optionHeight = this.props.optionHeight, className = option === focusedOption ? "VirtualizedSelectOption VirtualizedSelectFocusedOption" : "VirtualizedSelectOption";
                     return _jsx("div", {
                         className: className,
-                        onMouseOver: function() {
-                            return focusOption(option);
-                        },
                         onClick: function() {
                             return selectValue(option);
+                        },
+                        onMouseOver: function() {
+                            return focusOption(option);
                         },
                         style: {
                             height: optionHeight

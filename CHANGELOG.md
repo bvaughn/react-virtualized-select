@@ -1,6 +1,9 @@
 Changelog
 ------------
 
+##### 0.0.4
+Dependency bump for React 15.0 now that it has been released.
+
 ##### 0.0.3
 Finalized props signature of `VirtualizedSelect`; changed `rowRenderer` to `optionRenderer` to better align with `react-select` terminology.
 
