@@ -40,7 +40,7 @@ export default class VirtualizedSelect extends Component {
     const height = Math.min(maxHeight, options.length * optionHeight)
     const innerRowRenderer = optionRenderer || this._optionRenderer
 
-    function wrappedRowRenderer (index) {
+    function wrappedRowRenderer ({ index }) {
       const option = options[index]
 
       return innerRowRenderer({ focusedOption, focusedOptionIndex, focusOption, labelKey, option, options, selectValue, valueArray })
@@ -52,9 +52,9 @@ export default class VirtualizedSelect extends Component {
             <VirtualScroll
               className='VirtualSelectGrid'
               height={height}
+              rowCount={options.length}
               rowHeight={optionHeight}
               rowRenderer={wrappedRowRenderer}
-              rowsCount={options.length}
               scrollToIndex={focusedOptionIndex}
               width={width}
             />
