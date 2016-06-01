@@ -45,6 +45,8 @@ _react-select-virtualized_ works just like _react-select_. You pass it an array 
 ```js
 import React, { Component } from 'react'
 import VirtualizedSelect from 'react-virtualized-select'
+import 'react-virtualized/styles.css'
+import 'react-select/dist/react-select.css'
 import 'react-virtualized-select/styles.css'
 
 class MySelect extends Component {
