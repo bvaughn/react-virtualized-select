@@ -114,7 +114,7 @@
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
-    "react-select": "^1.0.0-beta12",
+    "react-select": "^1.0.0-beta13",
     "react-virtualized": "^7.0.0"
   },
   "peerDependencies": {
