@@ -127,7 +127,7 @@ function CountryOptionRenderer ({ focusedOption, focusedOptionIndex, focusOption
   if (option === focusedOption) {
     classNames.push(styles.countryOptionFocused)
   }
-  if (valueArray.includes(option)) {
+  if (valueArray.indexOf(option) >= 0) {
     classNames.push(styles.countryOptionSelected)
   }
 
