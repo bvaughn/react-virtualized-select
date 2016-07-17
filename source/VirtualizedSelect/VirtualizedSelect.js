@@ -25,7 +25,9 @@ export default class VirtualizedSelect extends Component {
 
   /** See VirtualScroll#recomputeRowHeights */
   recomputeOptionHeights (index = 0) {
-    this._virtualScroll.recomputeRowHeights(index)
+    if (this._virtualScroll) {
+      this._virtualScroll.recomputeRowHeights(index)
+    }
   }
 
   render () {
@@ -69,7 +71,7 @@ export default class VirtualizedSelect extends Component {
               height={height}
               ref={(ref) => this._virtualScroll = ref}
               rowCount={options.length}
-              rowHeight={({ index }) => optionHeight({
+              rowHeight={({ index }) => this._getOptionHeight({
                 option: options[index]
               })}
               rowRenderer={wrappedRowRenderer}

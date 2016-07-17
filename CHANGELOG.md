@@ -1,6 +1,9 @@
 Changelog
 ------------
 
+##### 1.1.1
+Fixed a regression for non-function `optionHeight` values.
+
 ##### 1.1.0
 Supports dynamic option heights via `optionHeight` as a function.
 Function should implement the following signature: `({ option: Object }): number`
