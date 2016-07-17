@@ -1,6 +1,13 @@
 Changelog
 ------------
 
+##### 1.1.0
+Supports dynamic option heights via `optionHeight` as a function.
+Function should implement the following signature: `({ option: Object }): number`
+
+##### 1.0.0
+First major release; interface now stable.
+
 ##### 0.0.4
 Dependency bump for React 15.0 now that it has been released.
 

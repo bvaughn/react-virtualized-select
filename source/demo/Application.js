@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import VirtualizedSelectExample from '../VirtualizedSelect/VirtualizedSelect.example'
 import cityData from './data/cities.js'
 import countryData from './data/countries.js'
+import nameData from './data/names.js'
 import styles from './Application.css'
 import '../../styles.css'
 
@@ -29,6 +30,7 @@ class Application extends Component {
           <VirtualizedSelectExample
             cityData={cityData}
             countryData={countryData}
+            nameData={nameData}
           />
         </section>
       </div>

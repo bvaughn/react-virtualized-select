@@ -7,7 +7,7 @@ export default class VirtualizedSelect extends Component {
 
   static propTypes = {
     maxHeight: PropTypes.number.isRequired,
-    optionHeight: PropTypes.number.isRequired,
+    optionHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.func]).isRequired,
     optionRenderer: PropTypes.func
   };
 
@@ -23,6 +23,11 @@ export default class VirtualizedSelect extends Component {
     this._optionRenderer = this._optionRenderer.bind(this)
   }
 
+  /** See VirtualScroll#recomputeRowHeights */
+  recomputeOptionHeights (index = 0) {
+    this._virtualScroll.recomputeRowHeights(index)
+  }
+
   render () {
     return (
       <Select
@@ -35,15 +40,25 @@ export default class VirtualizedSelect extends Component {
 
   // See https://github.com/JedWatson/react-select/#effeciently-rendering-large-lists-with-windowing
   _renderMenu ({ focusedOption, focusOption, labelKey, options, selectValue, valueArray }) {
-    const { maxHeight, optionHeight, optionRenderer } = this.props
+    const { optionHeight, optionRenderer } = this.props
     const focusedOptionIndex = options.indexOf(focusedOption)
-    const height = Math.min(maxHeight, options.length * optionHeight)
+    const height = this._calculateVirtualScrollHeight({ options })
     const innerRowRenderer = optionRenderer || this._optionRenderer
 
     function wrappedRowRenderer ({ index }) {
       const option = options[index]
 
-      return innerRowRenderer({ focusedOption, focusedOptionIndex, focusOption, labelKey, option, options, selectValue, valueArray })
+      return innerRowRenderer({
+        focusedOption,
+        focusedOptionIndex,
+        focusOption,
+        labelKey,
+        option,
+        optionIndex: index,
+        options,
+        selectValue,
+        valueArray
+      })
     }
 
     return (
@@ -52,8 +67,11 @@ export default class VirtualizedSelect extends Component {
             <VirtualScroll
               className='VirtualSelectGrid'
               height={height}
+              ref={(ref) => this._virtualScroll = ref}
               rowCount={options.length}
-              rowHeight={optionHeight}
+              rowHeight={({ index }) => optionHeight({
+                option: options[index]
+              })}
               rowRenderer={wrappedRowRenderer}
               scrollToIndex={focusedOptionIndex}
               width={width}
@@ -63,8 +81,34 @@ export default class VirtualizedSelect extends Component {
     )
   }
 
-  _optionRenderer ({ focusedOption, focusOption, labelKey, option, selectValue }) {
+  _calculateVirtualScrollHeight ({ options }) {
+    const { maxHeight } = this.props
+
+    let height = 0
+
+    for (let optionIndex = 0; optionIndex < options.length; optionIndex++) {
+      let option = options[optionIndex]
+
+      height += this._getOptionHeight({ option })
+
+      if (height > maxHeight) {
+        return maxHeight
+      }
+    }
+
+    return height
+  }
+
+  _getOptionHeight ({ option }) {
     const { optionHeight } = this.props
+
+    return optionHeight instanceof Function
+      ? optionHeight({ option })
+      : optionHeight
+  }
+
+  _optionRenderer ({ focusedOption, focusOption, labelKey, option, selectValue }) {
+    const height = this._getOptionHeight({ option })
 
     const className = option === focusedOption
       ? 'VirtualizedSelectOption VirtualizedSelectFocusedOption'
@@ -75,9 +119,7 @@ export default class VirtualizedSelect extends Component {
         className={className}
         onClick={() => selectValue(option)}
         onMouseOver={() => focusOption(option)}
-        style={{
-          height: optionHeight
-        }}
+        style={{ height }}
       >
         {option[labelKey]}
       </div>

@@ -42,3 +42,25 @@
 .countryLabel {
   flex: 1 1 auto;
 }
+
+.nameOption {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  padding: 0 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.nameHeader {
+  height: 25px;
+  background-color: #eee;
+  font-weight: bold;
+  font-size: .85;
+}
+.nameOptionFocused {
+  background-color: rgba(0, 126, 255, 0.1);
+}
+
+.nameOptionSelected {
+  font-weight: bold;
+}

@@ -5,7 +5,8 @@ import styles from './VirtualizedSelect.example.css'
 export default class VirtualizedSelectExample extends Component {
   static propTypes = {
     cityData: PropTypes.array.isRequired,
-    countryData: PropTypes.array.isRequired
+    countryData: PropTypes.array.isRequired,
+    nameData: PropTypes.array.isRequired
   };
 
   constructor (props) {
@@ -21,8 +22,8 @@ export default class VirtualizedSelectExample extends Component {
   }
 
   render () {
-    const { cityData, countryData } = this.props
-    const { clearable, disabled, multi, searchable, selectedCity, selectedCountry } = this.state
+    const { cityData, countryData, nameData } = this.props
+    const { clearable, disabled, multi, searchable, selectedCity, selectedCountry, selectedName } = this.state
 
     return (
       <div>
@@ -115,6 +116,30 @@ export default class VirtualizedSelectExample extends Component {
           value={selectedCountry}
           valueKey='code'
         />
+
+        <h4 className={styles.header}>
+          Dynamic Height Options
+        </h4>
+
+        <div className={styles.description}>
+          Displays option-group headers that are sized different than regular options.
+          Demonstrates how to use dynamic option heights feature.
+        </div>
+
+        <VirtualizedSelect
+          labelKey='name'
+          name='name'
+          onChange={(selectedName) => this.setState({ selectedName })}
+          onInputChange={() => this._customOptionHeightsSelect && this._customOptionHeightsSelect.recomputeOptionHeights()}
+          optionHeight={({ option }) => option.type === 'header' ? 25 : 35}
+          optionRenderer={NameOptionRenderer}
+          options={nameData}
+          ref={(ref) => this._customOptionHeightsSelect = ref}
+          searchable={searchable}
+          simpleValue
+          value={selectedName}
+          valueKey='name'
+        />
       </div>
     )
   }
@@ -146,4 +171,35 @@ function CountryOptionRenderer ({ focusedOption, focusedOptionIndex, focusOption
       />
     </div>
   )
+}
+
+function NameOptionRenderer ({ focusedOption, focusedOptionIndex, focusOption, labelKey, option, optionIndex, options, selectValue, valueArray }) {
+  const classNames = [styles.nameOption]
+
+  if (option.type === 'header') {
+    classNames.push(styles.nameHeader)
+
+    return (
+      <div className={classNames.join(' ')}>
+        {option.name}
+      </div>
+    )
+  } else {
+    if (option === focusedOption) {
+      classNames.push(styles.nameOptionFocused)
+    }
+    if (valueArray.indexOf(option) >= 0) {
+      classNames.push(styles.nameOptionSelected)
+    }
+
+    return (
+      <div
+        className={classNames.join(' ')}
+        onClick={() => selectValue(option)}
+        onMouseOver={() => focusOption(option)}
+      >
+        {option.name}
+      </div>
+    )
+  }
 }
