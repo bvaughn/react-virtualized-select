@@ -81,6 +81,7 @@ The additional parameters introduced by _react-select-virtualized_ are optional.
 
 | Property | Type | Description |
 |:---|:---|:---|
+| async | `PropTypes.bool` | Use `Select.Async` internally; if this property is specified then a [`loadOptions`](https://github.com/JedWatson/react-select#async-options-with-promises) method should also be used. |
 | maxHeight | `PropTypes.number` | Max height of options menu; defaults to 200 pixels. |
 | optionHeight | `PropTypes.number` or `PropTypes.func` | Option height (defaults to 35 pixels). Dynamic height can be supported via a function with the signature `({ option: Object }): number` |
 | optionRenderer | `PropTypes.func` | Custom option renderer; (see below for signature). |
@@ -91,7 +92,6 @@ You can override the built-in option renderer by specifying your own `optionRend
 
 | Property | Type | Description |
 |:---|:---|:---|
-| async | `PropTypes.bool` | Use `Select.Async` internally; if this property is specified then a `loadOptions` method should also be used. |
 | focusedOption | `PropTypes.object` | The option currently-focused in the dropdown. Use this property to determine if your rendered option should be highlighted or styled differently. |
 | focusedOptionIndex | `PropTypes.number` | Index of the currently-focused option. |
 | focusOption | `PropTypes.func` | Callback to update the focused option; for example, you may want to call this function on mouse-over. |
