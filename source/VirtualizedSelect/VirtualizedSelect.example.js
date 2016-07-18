@@ -15,15 +15,18 @@ export default class VirtualizedSelectExample extends Component {
     this.state = {
       clearable: true,
       disabled: false,
+      githubUsers: [],
       multi: false,
       searchable: true,
       selectedCity: null
     }
+
+    this._loadGithubUsers = this._loadGithubUsers.bind(this)
   }
 
   render () {
     const { cityData, countryData, nameData } = this.props
-    const { clearable, disabled, multi, searchable, selectedCity, selectedCountry, selectedName } = this.state
+    const { clearable, disabled, githubUsers, multi, searchable, selectedCity, selectedCountry, selectedGithubUser, selectedName } = this.state
 
     return (
       <div>
@@ -41,7 +44,6 @@ export default class VirtualizedSelectExample extends Component {
           disabled={disabled}
           labelKey='name'
           multi={multi}
-          name='city'
           onChange={(selectedCity) => this.setState({ selectedCity })}
           options={cityData}
           searchable={searchable}
@@ -107,7 +109,6 @@ export default class VirtualizedSelectExample extends Component {
 
         <VirtualizedSelect
           labelKey='name'
-          name='country'
           onChange={(selectedCountry) => this.setState({ selectedCountry })}
           optionRenderer={CountryOptionRenderer}
           optionHeight={40}
@@ -128,7 +129,6 @@ export default class VirtualizedSelectExample extends Component {
 
         <VirtualizedSelect
           labelKey='name'
-          name='name'
           onChange={(selectedName) => this.setState({ selectedName })}
           onInputChange={() => this._customOptionHeightsSelect && this._customOptionHeightsSelect.recomputeOptionHeights()}
           optionHeight={({ option }) => option.type === 'header' ? 25 : 35}
@@ -140,8 +140,45 @@ export default class VirtualizedSelectExample extends Component {
           value={selectedName}
           valueKey='name'
         />
+
+        <h4 className={styles.header}>
+          Async Options
+        </h4>
+
+        <div className={styles.description}>
+          Displays an async <code>Select</code> component wired up to search for Github users.
+        </div>
+
+        <VirtualizedSelect
+          async
+          backspaceRemoves={false}
+          labelKey='login'
+          loadOptions={this._loadGithubUsers}
+          minimumInput={1}
+          onChange={(selectedGithubUser) => this.setState({ selectedGithubUser })}
+          onValueClick={this._goToGithubUser}
+          options={githubUsers}
+          value={selectedGithubUser}
+          valueKey='id'
+        />
       </div>
     )
+  }
+
+  _goToGithubUser (value) {
+    window.open(value.html_url)
+  }
+
+  _loadGithubUsers (input) {
+    return fetch(`https://api.github.com/search/users?q=${input}`)
+      .then((response) => response.json())
+      .then((json) => {
+        const githubUsers = json.items
+
+        this.setState({ githubUsers })
+
+        return { options: githubUsers }
+      })
   }
 }
 

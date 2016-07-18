@@ -64,3 +64,11 @@
 .nameOptionSelected {
   font-weight: bold;
 }
+
+:global(a.Select-value-label) {
+  text-decoration: none;
+}
+:global(a.Select-value-label):hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

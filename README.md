@@ -91,6 +91,7 @@ You can override the built-in option renderer by specifying your own `optionRend
 
 | Property | Type | Description |
 |:---|:---|:---|
+| async | `PropTypes.bool` | Use `Select.Async` internally; if this property is specified then a `loadOptions` method should also be used. |
 | focusedOption | `PropTypes.object` | The option currently-focused in the dropdown. Use this property to determine if your rendered option should be highlighted or styled differently. |
 | focusedOptionIndex | `PropTypes.number` | Index of the currently-focused option. |
 | focusOption | `PropTypes.func` | Callback to update the focused option; for example, you may want to call this function on mouse-over. |

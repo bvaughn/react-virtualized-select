@@ -6,12 +6,14 @@ import { AutoSizer, VirtualScroll } from 'react-virtualized'
 export default class VirtualizedSelect extends Component {
 
   static propTypes = {
+    async: PropTypes.bool,
     maxHeight: PropTypes.number.isRequired,
     optionHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.func]).isRequired,
     optionRenderer: PropTypes.func
   };
 
   static defaultProps = {
+    async: false,
     maxHeight: 200,
     optionHeight: 35
   };
@@ -31,8 +33,14 @@ export default class VirtualizedSelect extends Component {
   }
 
   render () {
+    const { async } = this.props
+
+    const SelectComponent = async
+      ? Select.Async
+      : Select
+
     return (
-      <Select
+      <SelectComponent
         {...this.props}
         menuRenderer={this._renderMenu}
         menuStyle={{ overflow: 'hidden' }}
@@ -66,18 +74,18 @@ export default class VirtualizedSelect extends Component {
     return (
       <AutoSizer disableHeight>
         {({ width }) => (
-            <VirtualScroll
-              className='VirtualSelectGrid'
-              height={height}
-              ref={(ref) => this._virtualScroll = ref}
-              rowCount={options.length}
-              rowHeight={({ index }) => this._getOptionHeight({
-                option: options[index]
-              })}
-              rowRenderer={wrappedRowRenderer}
-              scrollToIndex={focusedOptionIndex}
-              width={width}
-            />
+          <VirtualScroll
+            className='VirtualSelectGrid'
+            height={height}
+            ref={(ref) => this._virtualScroll = ref}
+            rowCount={options.length}
+            rowHeight={({ index }) => this._getOptionHeight({
+              option: options[index]
+            })}
+            rowRenderer={wrappedRowRenderer}
+            scrollToIndex={focusedOptionIndex}
+            width={width}
+          />
         )}
       </AutoSizer>
     )

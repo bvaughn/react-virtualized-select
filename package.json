@@ -1,6 +1,6 @@
 {
   "name": "react-virtualized-select",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Drop-down menu for React with windowing to support large numbers of options.",
   "main": "dist/commonjs/index.js",
   "jsnext:main": "dist/es/index.js",
@@ -53,6 +53,7 @@
       "describe",
       "expect",
       "fdescribe",
+      "fetch",
       "fit",
       "it",
       "getComputedStyle",
@@ -114,7 +115,7 @@
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
-    "react-select": "^1.0.0-beta13",
+    "react-select": "^1.0.0-beta14",
     "react-virtualized": "^7.0.0"
   },
   "peerDependencies": {
