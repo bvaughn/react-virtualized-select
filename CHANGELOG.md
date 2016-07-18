@@ -1,6 +1,9 @@
 Changelog
 ------------
 
+##### 1.2.0
+Added support for async options (`Select.Async`) via new `async` boolean property.
+
 ##### 1.1.1
 Fixed a regression for non-function `optionHeight` values.
 
