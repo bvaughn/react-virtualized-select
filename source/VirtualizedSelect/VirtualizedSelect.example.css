@@ -72,3 +72,14 @@
   text-decoration: underline;
   cursor: pointer;
 }
+
+.loremIpsumOption {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid lightgray;
+}
+.loremIpsumOptionFocused {
+  background-color: lightblue;
+}
+.loremIpsumOptionSelected {
+  background-color: gold;
+}

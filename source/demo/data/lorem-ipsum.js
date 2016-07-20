@@ -1,0 +1,20 @@
+export default [
+  { text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac lectus suscipit, aliquet nunc a, mattis sapien. Cras tincidunt nisl non nibh scelerisque mattis.' },
+  { text: 'Aenean non dolor sit amet lacus venenatis suscipit a sit amet arcu.' },
+  { text: 'Sed interdum justo a pretium consequat.' },
+  { text: 'Nullam congue ipsum eu neque fermentum, non faucibus elit elementum. Etiam porta tortor nec urna ullamcorper, vel tincidunt nisi placerat. Morbi sit amet mauris vulputate tortor luctus interdum sed sit amet arcu.' },
+  { text: 'Pellentesque vulputate est rhoncus quam luctus varius. Integer suscipit nisi ut quam ornare consequat.' },
+  { text: 'Ut tristique dui quis urna dapibus viverra.' },
+  { text: 'Mauris euismod ipsum et tortor rutrum, nec tincidunt lacus volutpat. Aliquam dapibus ante convallis purus ultricies interdum.' },
+  { text: 'Proin vitae dolor lacinia nisi tincidunt porttitor. Praesent eu nunc nec nunc convallis blandit. Donec volutpat sapien non ex dictum cursus.' },
+  { text: 'Sed eleifend mi at interdum sodales.' },
+  { text: 'Nulla tincidunt sem vel ante ullamcorper euismod. Nam tincidunt enim vel felis iaculis varius.' },
+  { text: 'In eget magna nec sem viverra mollis sed ut dui. Etiam tempus lacus non ex blandit, vitae pellentesque velit consequat.' },
+  { text: 'Integer vitae nisi ac lorem condimentum suscipit quis tincidunt urna. Aliquam sit amet metus ac tellus ullamcorper facilisis. Etiam molestie elit a odio luctus, et fermentum odio rutrum.' },
+  { text: 'Fusce scelerisque neque non nisi sodales faucibus.' },
+  { text: 'Mauris tristique nisi ac ex feugiat interdum. Fusce efficitur massa in lectus mollis mollis. Cras elementum risus tempor egestas ullamcorper. Quisque vitae tellus vitae tellus vehicula pellentesque vel at quam. Proin hendrerit mauris vitae tempor dapibus.' },
+  { text: 'Pellentesque in est vitae nisi aliquet gravida non ut nibh. Praesent eget eros posuere, vehicula libero et, feugiat arcu.' },
+  { text: 'Suspendisse sed enim porttitor, convallis lorem quis, consequat diam.' },
+  { text: 'Aenean in velit eu nibh rutrum aliquet vel sed elit. Mauris varius orci vel laoreet congue. Ut malesuada nulla a neque porta, vitae semper elit vulputate. Nam vulputate enim id ante porttitor egestas. In viverra magna et lorem porta, pharetra placerat nibh tristique. Ut sed lacus id ipsum facilisis condimentum eget in justo.' },
+  { text: 'Etiam eget libero at nunc condimentum finibus. Vestibulum at tellus at mauris vehicula vehicula vitae ac lacus.' }
+]

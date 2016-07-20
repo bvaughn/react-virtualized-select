@@ -25,8 +25,8 @@ export default class VirtualizedSelectExample extends Component {
   }
 
   render () {
-    const { cityData, countryData, nameData } = this.props
-    const { clearable, disabled, githubUsers, multi, searchable, selectedCity, selectedCountry, selectedGithubUser, selectedName } = this.state
+    const { cityData, countryData, loremIpsumData, nameData } = this.props
+    const { clearable, disabled, githubUsers, multi, searchable, selectedCity, selectedCountry, selectedGithubUser, selectedLoremIpsum, selectedName } = this.state
 
     return (
       <div>
@@ -161,6 +161,25 @@ export default class VirtualizedSelectExample extends Component {
           value={selectedGithubUser}
           valueKey='id'
         />
+
+        <h4 className={styles.header}>
+          Auto-sized options
+        </h4>
+
+        <div className={styles.description}>
+          TODO
+        </div>
+
+        <VirtualizedSelect
+          labelKey='text'
+          onChange={(selectedLoremIpsum) => this.setState({ selectedLoremIpsum })}
+          optionHeight='auto'
+          optionRenderer={LoremIpsumOptionRenderer}
+          options={loremIpsumData}
+          searchable={false}
+          value={selectedLoremIpsum}
+          valueKey='text'
+        />
       </div>
     )
   }
@@ -182,7 +201,13 @@ export default class VirtualizedSelectExample extends Component {
   }
 }
 
-function CountryOptionRenderer ({ focusedOption, focusedOptionIndex, focusOption, labelKey, option, options, selectValue, valueArray }) {
+function CountryOptionRenderer ({
+  focusedOption,
+  focusOption,
+  option,
+  selectValue,
+  valueArray
+}) {
   const flagImageUrl = `https://rawgit.com/hjnilsson/country-flags/master/svg/${option.code.toLowerCase()}.svg`
 
   const classNames = [styles.countryOption]
@@ -210,7 +235,41 @@ function CountryOptionRenderer ({ focusedOption, focusedOptionIndex, focusOption
   )
 }
 
-function NameOptionRenderer ({ focusedOption, focusedOptionIndex, focusOption, labelKey, option, optionIndex, options, selectValue, valueArray }) {
+function LoremIpsumOptionRenderer ({
+  focusedOption,
+  focusOption,
+  option,
+  selectValue,
+  valueArray,
+  width
+}) {
+  const classNames = [styles.loremIpsumOption]
+  if (option === focusedOption) {
+    classNames.push(styles.loremIpsumOptionFocused)
+  }
+  if (valueArray.indexOf(option) >= 0) {
+    classNames.push(styles.loremIpsumOptionSelected)
+  }
+
+  return (
+    <div
+      className={classNames.join(' ')}
+      onClick={() => selectValue(option)}
+      onMouseOver={() => focusOption(option)}
+      style={{ width }}
+    >
+      {option.text}
+    </div>
+  )
+}
+
+function NameOptionRenderer ({
+  focusedOption,
+  focusOption,
+  option,
+  selectValue,
+  valueArray
+}) {
   const classNames = [styles.nameOption]
 
   if (option.type === 'header') {
