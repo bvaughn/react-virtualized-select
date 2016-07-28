@@ -38,6 +38,10 @@ export default class VirtualizedSelectExample extends Component {
           Displays a list of the 1,000 largest cities in the world using the default option-renderer.
         </div>
 
+        <div className={styles.description}>
+          Cities with names beginning with "y" have been disabled.
+        </div>
+
         <VirtualizedSelect
           autofocus
           clearable={clearable}

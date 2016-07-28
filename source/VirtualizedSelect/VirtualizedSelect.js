@@ -120,16 +120,28 @@ export default class VirtualizedSelect extends Component {
   _optionRenderer ({ focusedOption, focusOption, labelKey, option, selectValue }) {
     const height = this._getOptionHeight({ option })
 
-    const className = option === focusedOption
-      ? 'VirtualizedSelectOption VirtualizedSelectFocusedOption'
-      : 'VirtualizedSelectOption'
+    const className = ['VirtualizedSelectOption']
+
+    if (option === focusedOption) {
+      className.push('VirtualizedSelectFocusedOption')
+    }
+
+    if (option.disabled) {
+      className.push('VirtualizedSelectDisabledOption')
+    }
+
+    const events = option.disabled
+      ? {}
+      : {
+        onClick: () => selectValue(option),
+        onMouseOver: () => focusOption(option)
+      }
 
     return (
       <div
-        className={className}
-        onClick={() => selectValue(option)}
-        onMouseOver={() => focusOption(option)}
+        className={className.join(' ')}
         style={{ height }}
+        {...events}
       >
         {option[labelKey]}
       </div>

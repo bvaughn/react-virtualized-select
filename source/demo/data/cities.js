@@ -991,12 +991,12 @@ export default [
   { name: 'Worcester' },
   { name: 'Wylie' },
   { name: 'Wyoming' },
-  { name: 'Yakima' },
-  { name: 'Yonkers' },
-  { name: 'Yorba Linda' },
-  { name: 'York' },
-  { name: 'Youngstown' },
-  { name: 'Yuba City' },
-  { name: 'Yucaipa' },
-  { name: 'Yuma' }
+  { name: 'Yakima', disabled: true },
+  { name: 'Yonkers', disabled: true },
+  { name: 'Yorba Linda', disabled: true },
+  { name: 'York', disabled: true },
+  { name: 'Youngstown', disabled: true },
+  { name: 'Yuba City', disabled: true },
+  { name: 'Yucaipa', disabled: true },
+  { name: 'Yuma', disabled: true }
 ]
