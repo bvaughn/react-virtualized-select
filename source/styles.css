@@ -15,5 +15,5 @@
   background-color: rgba(0, 126, 255, 0.1);
 }
 .VirtualizedSelectDisabledOption {
-  color: #999;
+  opacity: 0.5;
 }

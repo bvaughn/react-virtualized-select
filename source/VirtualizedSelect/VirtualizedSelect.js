@@ -130,10 +130,12 @@ export default class VirtualizedSelect extends Component {
       className.push('VirtualizedSelectDisabledOption')
     }
 
-    const events = {
-      ...(!option.disabled && { onClick: () => selectValue(option) }),
-      ...(!option.disabled && { onMouseOver: () => focusOption(option) })
-    }
+    const events = option.disabled
+      ? {}
+      : {
+        onClick: () => selectValue(option),
+        onMouseOver: () => focusOption(option)
+      }
 
     return (
       <div
