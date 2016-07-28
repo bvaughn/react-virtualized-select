@@ -1,6 +1,9 @@
 Changelog
 ------------
 
+##### 1.3.0
+Added support for `disabled` attribute in options array.
+
 ##### 1.2.0
 Added support for async options (`Select.Async`) via new `async` boolean property.
 
