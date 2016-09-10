@@ -85,6 +85,7 @@ The additional parameters introduced by _react-select-virtualized_ are optional.
 | maxHeight | `PropTypes.number` | Max height of options menu; defaults to 200 pixels. |
 | optionHeight | `PropTypes.number` or `PropTypes.func` | Option height (defaults to 35 pixels). Dynamic height can be supported via a function with the signature `({ option: Object }): number` |
 | optionRenderer | `PropTypes.func` | Custom option renderer; (see below for signature). |
+| selectComponent | `PropTypes.func` | Use a sepecific select HOC (eg `Select.Creatable`); defaults to `Select` (or `Select.Async` if `async` flag is true). |
 
 ## Custom Option Renderer
 

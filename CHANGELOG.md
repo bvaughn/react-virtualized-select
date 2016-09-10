@@ -1,6 +1,9 @@
 Changelog
 ------------
 
+##### 1.4.0
+Added `selectComponent` option to enable users to choose a sepecific select HOC (eg `Select.Creatable`).
+
 ##### 1.3.0
 Added support for `disabled` attribute in options array.
 

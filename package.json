@@ -1,6 +1,6 @@
 {
   "name": "react-virtualized-select",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Drop-down menu for React with windowing to support large numbers of options.",
   "main": "dist/commonjs/index.js",
   "jsnext:main": "dist/es/index.js",

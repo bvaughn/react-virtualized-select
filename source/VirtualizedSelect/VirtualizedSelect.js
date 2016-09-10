@@ -9,7 +9,8 @@ export default class VirtualizedSelect extends Component {
     async: PropTypes.bool,
     maxHeight: PropTypes.number.isRequired,
     optionHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.func]).isRequired,
-    optionRenderer: PropTypes.func
+    optionRenderer: PropTypes.func,
+    selectComponent: PropTypes.func
   };
 
   static defaultProps = {
@@ -33,11 +34,7 @@ export default class VirtualizedSelect extends Component {
   }
 
   render () {
-    const { async } = this.props
-
-    const SelectComponent = async
-      ? Select.Async
-      : Select
+    const SelectComponent = this._getSelectComponent()
 
     return (
       <SelectComponent
@@ -115,6 +112,18 @@ export default class VirtualizedSelect extends Component {
     return optionHeight instanceof Function
       ? optionHeight({ option })
       : optionHeight
+  }
+
+  _getSelectComponent () {
+    const { async, selectComponent } = this.props
+
+    if (selectComponent) {
+      return selectComponent
+    } else if (async) {
+      return Select.Async
+    } else {
+      return Select
+    }
   }
 
   _optionRenderer ({ focusedOption, focusOption, labelKey, option, selectValue }) {
