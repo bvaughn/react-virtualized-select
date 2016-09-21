@@ -1,6 +1,38 @@
 Changelog
 ------------
 
+##### 2.0.0
+Updates to `react-virtualized` 8.x release.
+Read more about version 8 changes [here](https://github.com/bvaughn/react-virtualized/issues/386).
+
+Contains no new user-facing functionality but requires a major update due to the updated `optionRenderer` interface.
+Renderers will now receive 2 additional named properties: `key` and `style`.
+Both should be passed through to the top-level element of their rendered response.
+For example:
+
+```jsx
+// react-virtualized-select 1.x
+function optionRendererBefore ({ option, ...rest }) {
+  return (
+    <div>
+      {option.name}
+    </div>
+  )
+}
+
+// react-virtualized-select 2.x
+function optionRendererAfter ({ key, option, style, ...rest }) {
+  return (
+    <div
+      key={key}
+      style={style}
+    >
+      {option.name}
+    </div>
+  )
+}
+```
+
 ##### 1.4.0
 Added `selectComponent` option to enable users to choose a sepecific select HOC (eg `Select.Creatable`).
 

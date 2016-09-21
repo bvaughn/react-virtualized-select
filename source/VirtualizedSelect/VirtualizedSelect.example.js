@@ -215,7 +215,7 @@ export default class VirtualizedSelectExample extends Component {
   }
 }
 
-function CountryOptionRenderer ({ focusedOption, focusedOptionIndex, focusOption, labelKey, option, options, selectValue, valueArray }) {
+function CountryOptionRenderer ({ focusedOption, focusedOptionIndex, focusOption, key, labelKey, option, options, selectValue, style, valueArray }) {
   const flagImageUrl = `https://rawgit.com/hjnilsson/country-flags/master/svg/${option.code.toLowerCase()}.svg`
 
   const classNames = [styles.countryOption]
@@ -229,8 +229,10 @@ function CountryOptionRenderer ({ focusedOption, focusedOptionIndex, focusOption
   return (
     <div
       className={classNames.join(' ')}
+      key={key}
       onClick={() => selectValue(option)}
       onMouseOver={() => focusOption(option)}
+      style={style}
     >
       <label className={styles.countryLabel}>
         {option.name}
@@ -243,14 +245,18 @@ function CountryOptionRenderer ({ focusedOption, focusedOptionIndex, focusOption
   )
 }
 
-function NameOptionRenderer ({ focusedOption, focusedOptionIndex, focusOption, labelKey, option, optionIndex, options, selectValue, valueArray }) {
+function NameOptionRenderer ({ focusedOption, focusedOptionIndex, focusOption, key, labelKey, option, optionIndex, options, selectValue, style, valueArray }) {
   const classNames = [styles.nameOption]
 
   if (option.type === 'header') {
     classNames.push(styles.nameHeader)
 
     return (
-      <div className={classNames.join(' ')}>
+      <div
+        className={classNames.join(' ')}
+        key={key}
+        style={style}
+      >
         {option.name}
       </div>
     )
@@ -265,8 +271,10 @@ function NameOptionRenderer ({ focusedOption, focusedOptionIndex, focusOption, l
     return (
       <div
         className={classNames.join(' ')}
+        key={key}
         onClick={() => selectValue(option)}
         onMouseOver={() => focusOption(option)}
+        style={style}
       >
         {option.name}
       </div>

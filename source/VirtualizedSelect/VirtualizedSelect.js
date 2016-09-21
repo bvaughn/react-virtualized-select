@@ -1,7 +1,7 @@
 /** @flow */
 import React, { Component, PropTypes } from 'react'
 import Select from 'react-select'
-import { AutoSizer, VirtualScroll } from 'react-virtualized'
+import { AutoSizer, List } from 'react-virtualized'
 
 export default class VirtualizedSelect extends Component {
 
@@ -26,7 +26,7 @@ export default class VirtualizedSelect extends Component {
     this._optionRenderer = this._optionRenderer.bind(this)
   }
 
-  /** See VirtualScroll#recomputeRowHeights */
+  /** See List#recomputeRowHeights */
   recomputeOptionHeights (index = 0) {
     if (this._virtualScroll) {
       this._virtualScroll.recomputeRowHeights(index)
@@ -49,21 +49,23 @@ export default class VirtualizedSelect extends Component {
   _renderMenu ({ focusedOption, focusOption, labelKey, options, selectValue, valueArray }) {
     const { optionRenderer } = this.props
     const focusedOptionIndex = options.indexOf(focusedOption)
-    const height = this._calculateVirtualScrollHeight({ options })
+    const height = this._calculateListHeight({ options })
     const innerRowRenderer = optionRenderer || this._optionRenderer
 
-    function wrappedRowRenderer ({ index }) {
+    function wrappedRowRenderer ({ index, key, style }) {
       const option = options[index]
 
       return innerRowRenderer({
         focusedOption,
         focusedOptionIndex,
         focusOption,
+        key,
         labelKey,
         option,
         optionIndex: index,
         options,
         selectValue,
+        style,
         valueArray
       })
     }
@@ -71,7 +73,7 @@ export default class VirtualizedSelect extends Component {
     return (
       <AutoSizer disableHeight>
         {({ width }) => (
-          <VirtualScroll
+          <List
             className='VirtualSelectGrid'
             height={height}
             ref={(ref) => this._virtualScroll = ref}
@@ -88,7 +90,7 @@ export default class VirtualizedSelect extends Component {
     )
   }
 
-  _calculateVirtualScrollHeight ({ options }) {
+  _calculateListHeight ({ options }) {
     const { maxHeight } = this.props
 
     let height = 0
@@ -126,9 +128,7 @@ export default class VirtualizedSelect extends Component {
     }
   }
 
-  _optionRenderer ({ focusedOption, focusOption, labelKey, option, selectValue }) {
-    const height = this._getOptionHeight({ option })
-
+  _optionRenderer ({ focusedOption, focusOption, key, labelKey, option, selectValue, style }) {
     const className = ['VirtualizedSelectOption']
 
     if (option === focusedOption) {
@@ -149,7 +149,8 @@ export default class VirtualizedSelect extends Component {
     return (
       <div
         className={className.join(' ')}
-        style={{ height }}
+        key={key}
+        style={style}
         {...events}
       >
         {option[labelKey]}
