@@ -1,6 +1,10 @@
 Changelog
 ------------
 
+##### 2.0.1
+Utilizes `babel-plugin-transform-runtime` to remove `babelHelpers` from the built dist.
+This enables support without requiring the `babel-external-helpers` plugin in application code.
+
 ##### 2.0.0
 Updates to `react-virtualized` 8.x release.
 Read more about version 8 changes [here](https://github.com/bvaughn/react-virtualized/issues/386).
