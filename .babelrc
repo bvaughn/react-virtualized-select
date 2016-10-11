@@ -9,6 +9,7 @@
     },
     "development": {
       "plugins": [
+        "transform-runtime",
         "typecheck",
         [
           "react-transform",
@@ -41,6 +42,9 @@
       ]
     },
     "es": {
+      "plugins": [
+        "transform-runtime"
+      ],
       "presets": [
         "es2015-rollup",
         "react",
@@ -50,7 +54,8 @@
     "production": {
       "comments": false,
       "plugins": [
-        "transform-react-inline-elements"
+        "transform-react-inline-elements",
+        "transform-runtime"
       ],
       "presets": [
         "es2015",
