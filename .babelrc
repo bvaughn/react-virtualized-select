@@ -9,7 +9,6 @@
     },
     "development": {
       "plugins": [
-        "transform-runtime",
         "typecheck",
         [
           "react-transform",
