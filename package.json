@@ -1,6 +1,6 @@
 {
   "name": "react-virtualized-select",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Drop-down menu for React with windowing to support large numbers of options.",
   "main": "dist/commonjs/index.js",
   "jsnext:main": "dist/es/index.js",
@@ -23,6 +23,7 @@
     "posttest": "codecov",
     "prepublish": "npm run build",
     "start": "cross-env NODE_ENV=development webpack-dev-server --hot --inline --config webpack.config.dev.js",
+    "stats": "NODE_ENV=production webpack --config webpack.config.demo.js -p --json > stats.json",
     "test": "npm run lint && npm run test:unit",
     "test:unit": "cross-env NODE_ENV=test karma start",
     "watch": "watch 'clear && npm run test -s' source",

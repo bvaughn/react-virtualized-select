@@ -1,6 +1,9 @@
 Changelog
 ------------
 
+##### 2.0.2
+Dramatically reduced library size by limiting the parts of react-virtualized that are imported.
+
 ##### 2.0.1
 Utilizes `babel-plugin-transform-runtime` to remove `babelHelpers` from the built dist.
 This enables support without requiring the `babel-external-helpers` plugin in application code.
