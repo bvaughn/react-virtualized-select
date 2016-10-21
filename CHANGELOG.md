@@ -1,6 +1,9 @@
 Changelog
 ------------
 
+##### 2.1.0
+Added `listProps` prop to enable pass-through of additional, custom properties to the underlying react-virtualized `List`.
+
 ##### 2.0.2
 Dramatically reduced library size by limiting the parts of react-virtualized that are imported.
 

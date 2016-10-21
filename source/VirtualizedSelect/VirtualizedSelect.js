@@ -10,6 +10,7 @@ export default class VirtualizedSelect extends Component {
 
   static propTypes = {
     async: PropTypes.bool,
+    listProps: PropTypes.object,
     maxHeight: PropTypes.number.isRequired,
     optionHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.func]).isRequired,
     optionRenderer: PropTypes.func,
@@ -50,7 +51,7 @@ export default class VirtualizedSelect extends Component {
 
   // See https://github.com/JedWatson/react-select/#effeciently-rendering-large-lists-with-windowing
   _renderMenu ({ focusedOption, focusOption, labelKey, options, selectValue, valueArray }) {
-    const { optionRenderer } = this.props
+    const { listProps, optionRenderer } = this.props
     const focusedOptionIndex = options.indexOf(focusedOption)
     const height = this._calculateListHeight({ options })
     const innerRowRenderer = optionRenderer || this._optionRenderer
@@ -87,6 +88,7 @@ export default class VirtualizedSelect extends Component {
             rowRenderer={wrappedRowRenderer}
             scrollToIndex={focusedOptionIndex}
             width={width}
+            {...listProps}
           />
         )}
       </AutoSizer>
