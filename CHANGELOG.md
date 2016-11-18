@@ -1,6 +1,11 @@
 Changelog
 ------------
 
+##### 2.1.1
+Added a workaround for a bug in `Creatable` (react-select 1.0.0-rc2).
+Clicking on the placeholder item now successfully creates new options.
+See issue #33.
+
 ##### 2.1.0
 Added `listProps` prop to enable pass-through of additional, custom properties to the underlying react-virtualized `List`.
 
