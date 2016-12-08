@@ -121,7 +121,8 @@
   "dependencies": {
     "babel-runtime": "^6.11.6",
     "react-select": "^1.0.0-beta14",
-    "react-virtualized": "^8.0.5"
+    "react-virtualized": "^8.0.5",
+    "whatwg-fetch": "^2.0.1"
   },
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0",
