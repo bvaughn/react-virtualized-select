@@ -17,3 +17,6 @@
 .VirtualizedSelectDisabledOption {
   opacity: 0.5;
 }
+.VirtualizedSelectSelectedOption {
+  font-weight: bold;
+}

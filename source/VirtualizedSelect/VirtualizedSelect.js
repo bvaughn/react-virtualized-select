@@ -140,7 +140,7 @@ export default class VirtualizedSelect extends Component {
     }
   }
 
-  _optionRenderer ({ focusedOption, focusOption, key, labelKey, option, selectValue, style }) {
+  _optionRenderer ({ focusedOption, focusOption, key, labelKey, option, selectValue, style, valueArray }) {
     const className = ['VirtualizedSelectOption']
 
     if (option === focusedOption) {
@@ -149,6 +149,10 @@ export default class VirtualizedSelect extends Component {
 
     if (option.disabled) {
       className.push('VirtualizedSelectDisabledOption')
+    }
+
+    if (valueArray && valueArray.indexOf(option) >= 0) {
+      className.push('VirtualizedSelectSelectedOption')
     }
 
     const events = option.disabled
