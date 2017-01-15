@@ -1,6 +1,9 @@
 Changelog
 ------------
 
+##### 2.2.0
+* 🎉 Default option renderer highlights selected option in bold ([@the-spyke](https://github.com/the-spyke) - [#40](https://github.com/bvaughn/react-virtualized-select/pull/40))
+
 ##### 2.1.1
 Added a workaround for a bug in `Creatable` (react-select 1.0.0-rc2).
 Clicking on the placeholder item now successfully creates new options.
