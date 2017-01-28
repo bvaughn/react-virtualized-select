@@ -37,12 +37,19 @@ export default class VirtualizedSelect extends Component {
     }
   }
 
+  focus () {
+    if (this._reactSelect) {
+      return this._reactSelect.focus();
+    }
+  }
+
   render () {
     const SelectComponent = this._getSelectComponent()
 
     return (
       <SelectComponent
         {...this.props}
+        ref={ref => { this._reactSelect = ref; }}
         menuRenderer={this._renderMenu}
         menuStyle={{ overflow: 'hidden' }}
       />
