@@ -1,6 +1,9 @@
 Changelog
 ------------
 
+##### 2.3.0
+* 🎉 `focus` method added to `VirtualizedSelect` ([@Syynth](https://github.com/Syynth) - [#41](https://github.com/bvaughn/react-virtualized-select/pull/41))
+
 ##### 2.2.0
 * 🎉 Default option renderer highlights selected option in bold ([@the-spyke](https://github.com/the-spyke) - [#40](https://github.com/bvaughn/react-virtualized-select/pull/40))
 

@@ -28,18 +28,21 @@ export default class VirtualizedSelect extends Component {
 
     this._renderMenu = this._renderMenu.bind(this)
     this._optionRenderer = this._optionRenderer.bind(this)
+    this._setListRef = this._setListRef.bind(this)
+    this._setSelectRef = this._setSelectRef.bind(this)
   }
 
   /** See List#recomputeRowHeights */
   recomputeOptionHeights (index = 0) {
-    if (this._virtualScroll) {
-      this._virtualScroll.recomputeRowHeights(index)
+    if (this._listRef) {
+      this._listRef.recomputeRowHeights(index)
     }
   }
 
+  /** See Select#focus (in react-select) */
   focus () {
-    if (this._reactSelect) {
-      return this._reactSelect.focus();
+    if (this._selectRef) {
+      return this._selectRef.focus()
     }
   }
 
@@ -49,7 +52,7 @@ export default class VirtualizedSelect extends Component {
     return (
       <SelectComponent
         {...this.props}
-        ref={ref => { this._reactSelect = ref; }}
+        ref={this._setSelectRef}
         menuRenderer={this._renderMenu}
         menuStyle={{ overflow: 'hidden' }}
       />
@@ -94,7 +97,7 @@ export default class VirtualizedSelect extends Component {
           <List
             className='VirtualSelectGrid'
             height={height}
-            ref={(ref) => this._virtualScroll = ref}
+            ref={this._setListRef}
             rowCount={options.length}
             rowHeight={({ index }) => this._getOptionHeight({
               option: options[index]
@@ -179,5 +182,13 @@ export default class VirtualizedSelect extends Component {
         {option[labelKey]}
       </div>
     )
+  }
+
+  _setListRef (ref) {
+    this._listRef = ref
+  }
+
+  _setSelectRef (ref) {
+    this._selectRef = ref
   }
 }
