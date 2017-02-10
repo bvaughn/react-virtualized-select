@@ -116,7 +116,8 @@
     "style-loader": "^0.13.0",
     "watch": "^0.16.0",
     "webpack": "^1.9.6",
-    "webpack-dev-server": "^1.14.0"
+    "webpack-dev-server": "^1.14.0",
+    "whatwg-fetch": "^2.0.1",
   },
   "dependencies": {
     "babel-runtime": "^6.11.6",

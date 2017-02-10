@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { Creatable } from 'react-select'
+import 'whatwg-fetch'
 import VirtualizedSelect from './VirtualizedSelect'
 import styles from './VirtualizedSelect.example.css'
 
