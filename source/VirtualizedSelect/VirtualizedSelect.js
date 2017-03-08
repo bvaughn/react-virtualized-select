@@ -177,6 +177,7 @@ export default class VirtualizedSelect extends Component {
         className={className.join(' ')}
         key={key}
         style={style}
+        title={option.title}
         {...events}
       >
         {option[labelKey]}
