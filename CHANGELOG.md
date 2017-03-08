@@ -1,6 +1,9 @@
 Changelog
 ------------
 
+##### 2.4.0
+* 🎉 Support option `title` attribute ([@targumon](https://github.com/targumon) - [#46](https://github.com/bvaughn/react-virtualized-select/pull/46))
+
 ##### 2.3.0
 * 🎉 `focus` method added to `VirtualizedSelect` ([@Syynth](https://github.com/Syynth) - [#41](https://github.com/bvaughn/react-virtualized-select/pull/41))
 
