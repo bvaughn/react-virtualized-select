@@ -121,7 +121,7 @@
   },
   "dependencies": {
     "babel-runtime": "^6.11.6",
-    "react-select": "^1.0.0-beta14",
+    "react-select": "^1.0.0-rc.2",
     "react-virtualized": "^8.0.5"
   },
   "peerDependencies": {
