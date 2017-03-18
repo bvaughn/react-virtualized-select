@@ -1,3 +1,6 @@
+// Polyfill a full ES6 environment
+import 'babel-polyfill'
+
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import VirtualizedSelectExample from '../VirtualizedSelect/VirtualizedSelect.example'
