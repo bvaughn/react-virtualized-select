@@ -217,7 +217,7 @@ export default class VirtualizedSelectExample extends Component {
 }
 
 function CountryOptionRenderer ({ focusedOption, focusedOptionIndex, focusOption, key, labelKey, option, options, selectValue, style, valueArray }) {
-  const flagImageUrl = `https://rawgit.com/hjnilsson/country-flags/master/svg/${option.code.toLowerCase()}.svg`
+  const flagImageUrl = `https://cdn.rawgit.com/hjnilsson/country-flags/9e827754/svg/${option.code.toLowerCase()}.svg`
 
   const classNames = [styles.countryOption]
   if (option === focusedOption) {
