@@ -11,7 +11,7 @@ module.exports = {
     path: 'dist/umd',
     filename: '[name].js',
     libraryTarget: 'umd',
-    library: 'react-virtualized-select'
+    library: 'VirtualizedSelect'
   },
   externals: {
     react: {

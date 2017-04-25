@@ -1,2 +1,4 @@
 /* @flow */
-export default from './VirtualizedSelect'
+import VirtualizedSelect from './VirtualizedSelect'
+
+module.exports = VirtualizedSelect
