@@ -1,6 +1,9 @@
 Changelog
 ------------
 
+##### 3.0.0
+* Same as v2.4.2 but with an updated external dependency versions (eg react-virtualized 8.x to 9.x, new prop-types lib, react alpha 16, etc).
+
 ##### 2.4.2
 * Backwards compat bugfix for `require('...').default` usecase (see issue #57).
 

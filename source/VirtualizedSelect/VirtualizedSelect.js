@@ -1,5 +1,6 @@
 /** @flow */
-import React, { Component, PropTypes } from 'react'
+import PropTypes from 'prop-types'
+import React, { Component } from 'react'
 import Select from 'react-select'
 
 // Import directly to avoid Webpack bundling the parts of react-virtualized that we are not using
