@@ -1,6 +1,9 @@
 Changelog
 ------------
 
+##### 2.4.2
+* Backwards compat bugfix for `require('...').default` usecase (see issue #57).
+
 ##### 2.4.1
 * 🎉 UMD build fixed to properly set `window.VirtualizedSelect` ([@armed](https://github.com/armed) - [#56](https://github.com/bvaughn/react-virtualized-select/pull/56))
 
