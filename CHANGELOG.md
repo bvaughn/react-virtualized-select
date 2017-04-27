@@ -1,6 +1,9 @@
 Changelog
 ------------
 
+##### 3.0.1
+* Revert v2.4.2, https://github.com/bvaughn/react-virtualized-select/issues/57#issuecomment-297742641
+
 ##### 3.0.0
 * Same as v2.4.2 but with an updated external dependency versions (eg react-virtualized 8.x to 9.x, new prop-types lib, react alpha 16, etc).
 
