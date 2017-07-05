@@ -16,9 +16,9 @@ export default class VirtualizedSelectExample extends Component {
     super(props)
 
     const creatableOptions = [
-      { label: 'Blue', value: '#00F' },
-      { label: 'Green', value: '#0F0' },
-      { label: 'Red', value: '#F00' }
+      { label: 'Blue', value: '#00F', className: 'MyCustomOptionClass' },
+      { label: 'Green', value: '#0F0', className: 'MyCustomOptionClass' },
+      { label: 'Red', value: '#F00', className: 'MyCustomOptionClass' }
     ]
 
     this.state = {

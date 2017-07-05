@@ -166,6 +166,10 @@ export default class VirtualizedSelect extends Component {
       className.push('VirtualizedSelectSelectedOption')
     }
 
+    if (option.className) {
+      className.push(option.className)
+    }
+
     const events = option.disabled
       ? {}
       : {
