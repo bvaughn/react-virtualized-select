@@ -1,6 +1,9 @@
 Changelog
 ------------
 
+##### 3.1.0
+* Default option renderer supports a `className` property on options.
+
 ##### 3.0.1
 * Revert v2.4.2, https://github.com/bvaughn/react-virtualized-select/issues/57#issuecomment-297742641
 
