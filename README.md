@@ -108,3 +108,4 @@ You can override the built-in option renderer by specifying your own `optionRend
 | selectValue | `PropTypes.func` | Callback to update the selected values; for example, you may want to call this function on click. |
 | style | `PropTypes.object` | Styles that must be passed to the rendered option. These styles are specifying the position of each option (required for correct option displaying in the dropdown).
 | valueArray | `PropTypes.arrayOf(PropTypes.object)` | Array of the currently-selected options. Use this property to determine if your rendered option should be highlighted or styled differently. |
+| valueKey | `PropTypes.string` | Attribute of option that contains the value. |
