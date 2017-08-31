@@ -233,7 +233,7 @@ function CountryOptionRenderer ({ focusedOption, focusedOptionIndex, focusOption
       className={classNames.join(' ')}
       key={key}
       onClick={() => selectValue(option)}
-      onMouseOver={() => focusOption(option)}
+      onMouseEnter={() => focusOption(option)}
       style={style}
     >
       <label className={styles.countryLabel}>
@@ -275,7 +275,7 @@ function NameOptionRenderer ({ focusedOption, focusedOptionIndex, focusOption, k
         className={classNames.join(' ')}
         key={key}
         onClick={() => selectValue(option)}
-        onMouseOver={() => focusOption(option)}
+        onMouseEnter={() => focusOption(option)}
         style={style}
       >
         {option.name}

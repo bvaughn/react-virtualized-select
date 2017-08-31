@@ -174,7 +174,7 @@ export default class VirtualizedSelect extends Component {
       ? {}
       : {
         onClick: () => selectValue(option),
-        onMouseOver: () => focusOption(option)
+        onMouseEnter: () => focusOption(option)
       }
 
     return (
