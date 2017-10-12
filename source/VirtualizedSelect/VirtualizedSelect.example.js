@@ -161,7 +161,7 @@ export default class VirtualizedSelectExample extends Component {
         </h4>
 
         <div className={styles.description}>
-          Displays an async <code>Select</code> component wired up to search for Github users.
+          Displays an async <code>Select</code> component wired up to search for GitHub users.
         </div>
 
         <VirtualizedSelect
