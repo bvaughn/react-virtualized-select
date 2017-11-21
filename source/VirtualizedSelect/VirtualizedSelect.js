@@ -12,7 +12,7 @@ export default class VirtualizedSelect extends Component {
   static propTypes = {
     async: PropTypes.bool,
     listProps: PropTypes.object,
-    maxHeight: PropTypes.number.isRequired,
+    maxHeight: PropTypes.number,
     optionHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.func]),
     optionRenderer: PropTypes.func,
     selectComponent: PropTypes.func
