@@ -924,4 +924,4 @@ export default [
   { name: 'Yuba City', disabled: true },
   { name: 'Yucaipa', disabled: true },
   { name: 'Yuma', disabled: true }
-];
+]
