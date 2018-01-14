@@ -1,6 +1,9 @@
 Changelog
 ------------
 
+##### 3.1.1
+* Added missing `valueKey` to custom option renderer params.
+
 ##### 3.1.0
 * Default option renderer supports a `className` property on options.
 
