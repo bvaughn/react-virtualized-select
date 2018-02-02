@@ -10,6 +10,7 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 0 .5rem;
+  cursor: pointer;
 }
 .VirtualizedSelectFocusedOption {
   background-color: rgba(0, 126, 255, 0.1);
