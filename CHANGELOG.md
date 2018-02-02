@@ -1,8 +1,11 @@
 Changelog
 ------------
 
-##### 3.1.2
+##### 3.1.3
 * Added `cursor: pointer` style by defalut to select options.
+
+##### 3.1.2
+* (Nothing.)
 
 ##### 3.1.1
 * Added missing `valueKey` to custom option renderer params.
