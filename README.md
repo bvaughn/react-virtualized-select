@@ -110,3 +110,26 @@ You can override the built-in option renderer by specifying your own `optionRend
 | style | `Object` | Styles that must be passed to the rendered option. These styles are specifying the position of each option (required for correct option displaying in the dropdown).
 | valueArray | `Array<Object>` | Array of the currently-selected options. Use this property to determine if your rendered option should be highlighted or styled differently. |
 | valueKey | `string` | Attribute of option that contains the value. |
+
+## optionRenderer example
+
+It should be noted that in order to successfully set the active index in your custom renderer, you _need_ to call the `selectValue` prop. A common pattern is to bind onto your `onClick` handler in your custom element. The example that follows also provides the required `style` prop (as noted above), which is necessary to properly position the element. Refer to the  [full example](https://github.com/bvaughn/react-virtualized-select/blob/master/source/demo/Application.js) for the complete usage.
+
+```jsx
+function Option({
+  style,
+  option: {
+    value,
+  },
+  selectValue,
+}) {
+  return (
+    <a
+      style={style}
+      onClick={() => selectValue(value)}
+    >
+      {value}
+    </a>
+  );
+}
+```
