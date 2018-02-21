@@ -113,7 +113,7 @@ You can override the built-in option renderer by specifying your own `optionRend
 
 ## optionRenderer example
 
-It should be noted that in order to successfully set the active index in your custom renderer, you _need_ to call the `selectValue` prop. A common pattern is to bind onto your `onClick` handler in your custom element. The example that follows also provides the required `style` prop (as noted above), which is necessary to properly position the element.
+It should be noted that in order to successfully set the active index in your custom renderer, you _need_ to call the `selectValue` prop. A common pattern is to bind onto your `onClick` handler in your custom element. The example that follows also provides the required `style` prop (as noted above), which is necessary to properly position the element. Refer to the  [https://github.com/bvaughn/react-virtualized-select/blob/master/source/demo/Application.js](full example) for the complete usage.
 
 ```jsx
 function Option({
