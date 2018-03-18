@@ -45,9 +45,9 @@ Alternately you can load a global-friendly UMD build:
 
 ## Example
 
-[Try this example in Code Sandbox.](https://codesandbox.io/s/91p80x10zp)
-
 _react-select-virtualized_ works just like _react-select_. You pass it an array of options, along with any other parameters supported by the [`Select` component](https://github.com/JedWatson/react-select/#usage).
+
+[Try this example in Code Sandbox.](https://codesandbox.io/s/91p80x10zp)
 
 ```js
 // Import default styles.
