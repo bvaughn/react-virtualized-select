@@ -43,42 +43,33 @@ Alternately you can load a global-friendly UMD build:
 <script src="path-to-react-virtualized-select/dist/umd/react-virtualized-select.js"></script>
 ```
 
-## Simple Example
+## Example
 
-_react-select-virtualized_ works just like _react-select_. You pass it an array of options, along with any other parameters supported by the [`Select` component](https://github.com/JedWatson/react-select/#usage). Here's a simple example:
+[Try this example in Code Sandbox.](https://codesandbox.io/s/91p80x10zp)
+
+_react-select-virtualized_ works just like _react-select_. You pass it an array of options, along with any other parameters supported by the [`Select` component](https://github.com/JedWatson/react-select/#usage).
 
 ```js
-import React, { Component } from 'react'
-import VirtualizedSelect from 'react-virtualized-select'
+// Import default styles.
+// This only needs to be done once; probably during bootstrapping process.
+import "react-select/dist/react-select.css";
+import "react-virtualized/styles.css";
+import "react-virtualized-select/styles.css";
 
-import 'react-select/dist/react-select.css'
-import 'react-virtualized/styles.css'
-import 'react-virtualized-select/styles.css'
+import React from "react";
+import ReactDOM from "react-dom";
+import Select from "react-virtualized-select";
 
-class MySelect extends Component {
-  constructor (props) {
-    super(props)
+// Dummy array of test values.
+const options = Array.from(new Array(1000), (_, index) => ({
+  label: `Item ${index}`,
+  value: index
+}));
 
-    this.state = {}
-  }
-
-  render () {
-    const options = [
-      { label: "One", value: 1 },
-      { label: "Two", value: 2 },
-      { label: "Three", value: 3, disabled: true }
-      // And so on...
-    ]
-
-    return (
-      <VirtualizedSelect
-        options={options}
-        onChange={(selectValue) => this.setState({ selectValue })}
-        value={this.state.selectValue}
-      />
-    )
-  }
-}
+ReactDOM.render(
+  <Select options={options} />,
+  document.getElementById("root")
+);
 ```
 
 ## React Virtualized Select Props
