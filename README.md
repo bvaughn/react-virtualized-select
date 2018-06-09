@@ -26,7 +26,6 @@ For example:
 // Make sure to import default styles.
 // This only needs to be done once; probably during bootstrapping process.
 import 'react-select/dist/react-select.css'
-import 'react-virtualized/styles.css'
 import 'react-virtualized-select/styles.css'
 
 // Then import the virtualized Select HOC
@@ -53,7 +52,6 @@ _react-select-virtualized_ works just like _react-select_. You pass it an array 
 // Import default styles.
 // This only needs to be done once; probably during bootstrapping process.
 import "react-select/dist/react-select.css";
-import "react-virtualized/styles.css";
 import "react-virtualized-select/styles.css";
 
 import React from "react";
