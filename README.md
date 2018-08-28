@@ -111,17 +111,15 @@ It should be noted that in order to successfully set the active index in your cu
 ```jsx
 function Option({
   style,
-  option: {
-    value,
-  },
+  option,
   selectValue,
 }) {
   return (
     <a
       style={style}
-      onClick={() => selectValue(value)}
+      onClick={() => selectValue(option)}
     >
-      {value}
+      {option.value}
     </a>
   );
 }
