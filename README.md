@@ -1,6 +1,6 @@
 ### This component is no longer supported
 
-Hello! This package is built on react-virtualied (a library that I no longer support) and react-select version 1.x (which is no longer the current version). As such, I've decided to stop supporting this package. GitHub issues and pull requests may be ignored.
+Hello! This package is built on [react-virtualized](https://github.com/bvaughn/react-virtualized) (a library that I no longer support) and vesion 1.0 of [react-select](https://github.com/JedWatson/react-select)  (which is no longer the current version). As such, I've decided to stop supporting this package. GitHub issues and pull requests may be ignored.
 
 If you are interested in taking over maintainence of this package, please send me an email (see my GitHub profile) and I'd be happy to add you as a collaborator.
 
