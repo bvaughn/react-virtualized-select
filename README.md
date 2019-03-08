@@ -2,7 +2,7 @@
 
 Hello! This package is built on [react-virtualized](https://github.com/bvaughn/react-virtualized) (a library that I no longer support) and vesion 1.0 of [react-select](https://github.com/JedWatson/react-select)  (which is no longer the current version). As such, I've decided to stop supporting this package. GitHub issues and pull requests may be ignored.
 
-If you are interested in taking over maintainence of this package, please send me an email (see my GitHub profile) and I'd be happy to add you as a collaborator.
+If you are interested in taking over maintenance of this package, please send me an email (see my GitHub profile) and I'd be happy to add you as a collaborator.
 
 # React Virtualized Select
 
