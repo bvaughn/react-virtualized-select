@@ -79,7 +79,7 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-0": "^6.5.0",
     "bluebird": "^3.0.5",
-    "codecov": "^1.0.1",
+    "codecov": "^3.7.1",
     "cross-env": "^1.0.7",
     "css-loader": "^0.23.0",
     "express": "^4.13.3",
